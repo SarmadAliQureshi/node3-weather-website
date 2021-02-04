@@ -6,6 +6,7 @@ const forecast =  require('./utils/weatherrequest')
 const app = express()
 const port = process.env.PORT || 3000
 
+
 const public_dir_path = path.join(__dirname,'../public')
 console.log( path.join(__dirname, '../views'))
 
@@ -77,7 +78,7 @@ app.get('*', function(req,resp){
 })
 
 app.listen(port,function(){
-    console.log('Server is up on '+port+' 3000')
+    console.log('Server is up on '+port)
 })
 
 console.log('dasda')
