@@ -4,6 +4,7 @@ const express = require('express')
 const geocode = require('./utils/geocode')
 const forecast =  require('./utils/weatherrequest')
 const app = express()
+const port = process.env.PORT || 3000
 
 const public_dir_path = path.join(__dirname,'../public')
 console.log( path.join(__dirname, '../views'))
@@ -75,8 +76,8 @@ app.get('*', function(req,resp){
     resp.render('404',{error:"Error 404",title:'404 Page'})
 })
 
-app.listen(3000,function(){
-    console.log('Server is up on port 3000')
+app.listen(port,function(){
+    console.log('Server is up on '+port+' 3000')
 })
 
 console.log('dasda')
